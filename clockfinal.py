@@ -8,7 +8,7 @@ Created on Mon Nov  7 17:08:57 2022
 import time
 import math
 import tkinter as tk
-from PIL import Image, ImageTk, ImageDraw
+from PIL import Image, ImageTk, ImageDraw, ImageFont
 
 
 def clock(img):
@@ -33,6 +33,12 @@ def clock(img):
     img1.text((3, 200), "9")
     img1.text((35, 110), "10")
     img1.text((100, 35), "11")
+    
+    
+    b = time.ctime()
+    
+    font = ImageFont.truetype("arial.ttf", 18)
+    img1.text((100, 260), b, font = font)
 
     a = time.localtime()
 
